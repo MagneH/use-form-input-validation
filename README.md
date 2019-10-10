@@ -65,7 +65,7 @@ const HelloWorld = () => {
               .string()
               .notOneOf([''])
               .required(),
-            'Please enter the value',
+            'Please enter a value',
           )}
         />
 
@@ -86,7 +86,7 @@ const HelloWorld = () => {
               .email()
               .notOneOf([''])
               .required(),
-            'Please enter the value',
+            'Please enter some other value',
           )}
         />
 
