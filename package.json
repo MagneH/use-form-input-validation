@@ -2,6 +2,11 @@
   "name": "use-form-input-validation",
   "version": "0.2.5",
   "description": "A hook for validating form input",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/MagneH/use-form-input-validation",
+  "bugs": {
+    "url": "https://github.com/MagneH/use-form-input-validation/issues"
+  },
   "main": "index.js",
   "scripts": {
     "test": "test",
