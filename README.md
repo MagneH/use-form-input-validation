@@ -40,7 +40,7 @@ import * as yup from 'yup';
 import { useValidation } from 'use-form-input-validation';
 
 const renderError = errorMessage => {
-  return errorMessage ? <div className="Form__errorMessage">{errorMessage}</div> : null;
+  return errorMessage ? <div className="form__error-message">{errorMessage}</div> : null;
 };
 
 const HelloWorld = () => {
