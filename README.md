@@ -7,20 +7,20 @@ A hook for validating form input
 
 ## Get Started
 
-###Installation
+### Installation
 
 ```
 npm install use-form-input-validation --save
 ```
 
-###Prerequisites
+### Prerequisites
 
 You need to provide the curry function with a yup schema for validation of each specific field.
 ```
 npm install yup --save
 ```
 
-###Usage
+### Usage
 
 The hook maintains its own state and returns a tuple consisting of [0] a curry function used to create onBlur handlers
 and [1] a function to retrieve a potential error. 
@@ -32,7 +32,7 @@ The curry function takes four values:
 3. A yup schema.
 4. A custom error message to render on error.
 
-###Example
+### Example
 
 ``` javascript
 import React from 'react';
