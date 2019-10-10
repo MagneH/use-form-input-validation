@@ -14,7 +14,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "build": "tsc",
+    "build": "rm index.d.ts && rm index.js && tsc",
     "check:format": "prettier --list-different \"src/**/*.{css,less,sass,scss,html,md,graphql,gql,json,ts,tsx,js,jsx,yml,yaml}\"",
     "apply:format": "prettier --write \"src/**/*.{css,less,sass,scss,html,md,graphql,gql,json,ts,tsx,js,jsx,yml,yaml}\""
   },
