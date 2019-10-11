@@ -27,7 +27,7 @@ const useValidation = (): any => {
   ) => void) => (
     e: React.FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLSelectElement>
   ): void => {
-    if (validator(value)) {
+    if (!validator(value)) {
       updateValidationErrors(fieldId, message);
     } else {
       updateValidationErrors(fieldId, null);
