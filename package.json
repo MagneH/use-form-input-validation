@@ -1,6 +1,6 @@
 {
   "name": "use-form-input-validation",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "A hook for validating form input",
   "readmeFilename": "README.md",
   "homepage": "https://github.com/MagneH/use-form-input-validation",
@@ -8,8 +8,8 @@
     "url": "https://github.com/MagneH/use-form-input-validation/issues"
   },
   "engines": {
-    "node": ">= 8.11.3",
-    "npm": ">= 10.16.3"
+    "node": ">= 8.10.0",
+    "npm": ">= 6.4.1"
   },
   "main": "index.js",
   "scripts": {
