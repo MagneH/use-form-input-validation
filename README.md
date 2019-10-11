@@ -58,11 +58,11 @@ const HelloWorld = () => {
           onBlur={fieldChecker(
             'some-id',
             value,
-            yup
+            (inputValue) => yup
               .string()
               .notOneOf([''])
               .required()
-              .validateSync,
+              .validateSync(inputValue),
             'Please enter a value',
           )}
         />
@@ -78,13 +78,13 @@ const HelloWorld = () => {
           onChange={setOtherValue}
           onBlur={fieldChecker(
             'some-other-id',
-            value,
-            yup
+            otherValue,
+            (inputValue) => yup
               .string()
-              .email()
               .notOneOf([''])
               .required()
-              .validateSync,
+              .validateSync(inputValue),
+            'Please enter a value',
             'Please enter some other value',
           )}
         />
