@@ -84,7 +84,6 @@ const HelloWorld = () => {
               .notOneOf([''])
               .required()
               .validateSync(inputValue),
-            'Please enter a value',
             'Please enter some other value',
           )}
         />
