@@ -49,47 +49,49 @@ const HelloWorld = () => {
     const [fieldChecker, getError] = useValidation();
     
     return (
-        <input
-          type="text"
-          id="some-id"
-          placeholder={'some placeholder'}
-          value={value}
-          onChange={setValue}
-          onBlur={fieldChecker(
-            'some-id',
-            value,
-            (inputValue) => yup
-              .string()
-              .notOneOf([''])
-              .required()
-              .validateSync(inputValue),
-            'Please enter a value',
-          )}
-        />
-
-       // Render error 1
-       {renderError(getError('some-id'))}
-
-        <input
-          type="text"
-          id="some-other-id"
-          placeholder={'some placeholder'}
-          value={otherValue}
-          onChange={setOtherValue}
-          onBlur={fieldChecker(
-            'some-other-id',
-            otherValue,
-            (inputValue) => yup
-              .string()
-              .notOneOf([''])
-              .required()
-              .validateSync(inputValue),
-            'Please enter some other value',
-          )}
-        />
-
-       // Render error 2
-       {renderError(getError('some-other-id'))}
+        <>
+            <input
+                type="text"
+                id="some-id"
+                placeholder={'some placeholder'}
+                value={value}
+                onChange={setValue}
+                onBlur={fieldChecker(
+                'some-id',
+                value,
+                (inputValue) => yup
+                    .string()
+                    .notOneOf([''])
+                    .required()
+                    .validateSync(inputValue),
+                'Please enter a value',
+                )}
+            />
+    
+           // Render error 1
+           {renderError(getError('some-id'))}
+    
+            <input
+                type="text"
+                id="some-other-id"
+                placeholder={'some placeholder'}
+                value={otherValue}
+                onChange={setOtherValue}
+                onBlur={fieldChecker(
+                'some-other-id',
+                otherValue,
+                (inputValue) => yup
+                    .string()
+                    .notOneOf([''])
+                    .required()
+                    .validateSync(inputValue),
+                'Please enter some other value',
+                )}
+            />
+    
+            // Render error 2
+            {renderError(getError('some-other-id'))}
+        </>
     );
 }
 ```
