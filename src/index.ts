@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Schema } from "yup";
-import { cloneDeep } from "lodash";
+import cloneDeep from "lodash.clonedeep";
 
 const useValidation = (): any => {
   const [validationErrors, setValidationErrors] = useState<
@@ -19,7 +18,7 @@ const useValidation = (): any => {
   const fieldChecker = (
     fieldId: string,
     value: string,
-    schema: Schema<any>,
+    validator: (value: any) => boolean,
     message: string
   ): ((
     event:
@@ -28,7 +27,7 @@ const useValidation = (): any => {
   ) => void) => (
     e: React.FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLSelectElement>
   ): void => {
-    if (!schema.isValidSync(value)) {
+    if (validator(value)) {
       updateValidationErrors(fieldId, message);
     } else {
       updateValidationErrors(fieldId, null);

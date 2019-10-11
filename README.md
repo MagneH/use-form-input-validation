@@ -16,9 +16,6 @@ npm install use-form-input-validation --save
 ### Prerequisites
 
 You need to provide the curry function with a yup schema for validation of each specific field.
-```
-npm install yup --save
-```
 
 ### Usage
 
@@ -29,7 +26,7 @@ The curry function takes four values:
 
 1. A unique id.
 2. A value to validate.
-3. A yup schema.
+3. A validator function that takes a value and returns a boolean value, either `true` or `false`.
 4. A custom error message to render on error.
 
 ### Example
@@ -64,7 +61,8 @@ const HelloWorld = () => {
             yup
               .string()
               .notOneOf([''])
-              .required(),
+              .required()
+              .validateSync,
             'Please enter a value',
           )}
         />
@@ -85,7 +83,8 @@ const HelloWorld = () => {
               .string()
               .email()
               .notOneOf([''])
-              .required(),
+              .required()
+              .validateSync,
             'Please enter some other value',
           )}
         />
